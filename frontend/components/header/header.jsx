@@ -17,7 +17,7 @@ class Header extends React.Component {
   signupHeader() {
     return (
       <nav className="header-nav">
-        <img src={"/assets/brava_logo.jpg"}  className="header-logo" alt="Logo"/>
+        <img src={"window.logoURL"}  className="header-logo" alt="Logo"/>
         <Link to="/login" className="signup-header-login-link">Log In</Link>
       </nav>
     )
