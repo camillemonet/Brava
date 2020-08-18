@@ -1,0 +1,33 @@
+.header-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(235, 233, 233);
+}
+
+.header-logo {
+  height: 40px;
+  margin: 10px;
+}
+
+.signup-header-login-link {
+  background-color: white;
+  font-weight: 700;
+  color: #242428;
+  padding: 6px 16px;
+  margin-right: 15px;
+  border: 1px solid #dfdfe8;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background-color 0.25s ease-in-out;
+}
+
+.signup-header-login-link:hover {
+  background-color: rgb(235, 235, 225);
+}
+
+.login-header-signup-link {
+  background-color: #fc5200;
+}

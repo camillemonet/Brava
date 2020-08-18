@@ -1,0 +1,121 @@
+.splash-main {
+  margin: 80px;
+}
+
+.splash-text-center {
+  display: flex;
+  justify-content: center;
+  font-size: 48px;
+  margin-bottom: 80px;
+  font-weight: 700;
+}
+
+.splash-tech-image {
+  display: block;
+  width: 100%;
+  max-width: 468px;
+  margin: 0 auto;
+}
+
+.splash-tech-image-div {
+  margin-left: 8.33%;
+  width: 41.7%;
+  padding-left: 16px;
+  padding-right: 16px;
+  box-sizing: border-box;
+}
+
+.splash-signup-links {
+  text-align: center;
+  padding-left: 64px;
+  padding-right: 64px;
+  box-sizing: border-box;
+  display: block;
+}
+
+.splash-main-content-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.splash-main-right {
+  // display: flex;
+  // align-items: center;
+  display: inline-block;
+}
+
+.splash-signup-links [class*="splash-signup-link"] {
+  height: 20px;
+  // background-position: 16px center;
+  font-size: 14px;
+  position: relative;
+  border: 1px solid #dfdfe8;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 50px;
+  padding-right: 50px;
+  transition: background-color 0.1s ease, border-color 0.1s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.splash-or-div {
+  display: block;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-top: 1px solid #dfdfe8;
+  height: 1px;
+}
+
+.splash-or {
+  background-color: white;
+  color: #6d6d78;
+  display: inline-block;
+  padding: 0 12px;
+  transform: translateY(-60%);
+  box-sizing: border-box;
+}
+
+.splash-signup-link-demo {
+  color: #fff;
+  background-color: #fc5200;
+}
+
+.splash-signup-link-email {
+  color: black;
+}
+
+.splash-react-icon {
+  font-size: 30px;
+  position: absolute;
+  left: 10px;
+  bottom: 12px;
+}
+
+.disclaimer, .splash-already-member {
+  display: block;
+  font-size: 12px;
+  margin-top: 12px;
+  color: #494950;
+  margin-bottom: 20px;
+  text-align: center;
+  padding-left: 64px;
+  padding-right: 64px;
+}
+
+.splash-footer {
+  margin-top: 0;
+  background-color: #242428;
+  color: white;
+  font-size: 10px;
+  padding-top: 64px;
+  padding-bottom: 64px;
+  display: block;
+}
+
