@@ -1,0 +1,190 @@
+.signup-main-content {
+  height: 100vh;
+  width: 100%;
+  background-image: url(https://d3nn82uaxijpm6.cloudfront.net/assets/website/backgrounds/cycling-01-94d1179262c99c878605a57a746e426866497d2ed406c8b98d006dc8139c4524.jpg);
+  background-size: cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-middle-menu {
+  display: block;
+  box-sizing: border-box;
+  width: 400px;
+}
+
+.signup-title {
+  background-color: rgba(0, 0, 0, 0.85);
+  border-radius: 3px;
+  display: block;
+  padding: 20px 50px;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 41px;
+  color: white;
+  margin-block-start: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  text-align: center;
+  display: block;
+}
+
+.signup-entry {
+  display: block;
+  padding: 30px 50px;
+  box-sizing: border-box;
+  margin-top: 0em;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.signup-form {
+  width: 300px;
+}
+
+.signup-link-demo {
+  height: 40px;
+  font-size: 14px;
+  position: relative;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 50px;
+  padding-right: 50px;
+  transition: background-color 0.1s ease, border-color 0.1s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  background-color: white;
+  width: 100%;
+  color: #fc5200;
+  font-weight: bold;
+  border: none;
+}
+
+// .signup-link-demo:hover {
+//   background-color: rgb(200, 200, 200);
+// }
+
+.signup-react-icon {
+  font-size: 30px;
+  color: #fc5200;
+  position: absolute;
+  left: 10px;
+  bottom: 6px;
+}
+
+.signup-or {
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  font-size: 12px;
+  line-height: 22px;
+  box-sizing: border-box;
+  display: block;
+  color: rgb(131, 130, 130);
+}
+
+.signup-form [class*="signup-input"] {
+  height: 12px;
+  font-size: 14px;
+  position: relative;
+  border: 1px solid #666;
+  margin-top: 19px;
+  margin-bottom: 5px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 20px;
+  padding-right: 100px;
+  transition: background-color 0.1s ease, border-color 0.1s ease;
+  display: block;
+  border-radius: 3px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #CCC;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+}
+
+.signup-form [class*="signup-input"]::placeholder {
+  color: rgb(200, 200, 200);
+  opacity: 1;
+}
+
+.signup-form [class*="signup-input"]:focus {
+  background-color: white;
+  color: black;
+  -webkit-box-shadow: 0 0 8px #fff;
+  box-shadow: 0 0 8px #fff;
+}
+
+.signup-button {
+  height: 40px;
+  font-size: 14px;
+  position: relative;
+  margin-top: 5px;
+  margin-bottom: 25px;
+  padding-top: 16px;
+  padding-bottom: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+  transition: background-color 0.1s ease, border-color 0.1s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  color: white;
+  background-color: #fc5200;
+  width: 100%;
+  font-weight: bold;
+  border: none;
+}
+
+.signup-button:hover {
+  background-color: #c54200;
+}
+
+.signup-remember {
+  padding: 10px 0px;
+  color: white;
+  font-weight: 400;
+  min-height: 20px;
+  cursor: pointer;
+  padding-left: 8px;
+  display: inline-block;
+  text-align: left;
+  font-size: 14px;
+  position: relative;
+  right: 100px;
+}
+
+.signup-forgot {
+  font-size: 14px;
+  color: #dfdfe8;
+  cursor: pointer;
+  font-weight: bold;
+  padding-top: 15px;
+  border-top: 1px solid #484849;
+  box-sizing: border-box;
+  display: block;
+  position: relative;
+}
+
+.signup-terms {
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  font-size: 12px;
+  line-height: 22px;
+  box-sizing: border-box;
+  display: block;
+  color: rgb(130, 130, 130);
+}
+
+.signup-terms a {
+  color: rgb(230, 230, 230);
+}

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_17_223300) do
+ActiveRecord::Schema.define(version: 2020_08_26_182352) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,10 +28,12 @@ ActiveRecord::Schema.define(version: 2020_08_17_223300) do
   create_table "routes", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.decimal "total_distance"
+    t.integer "user_id", null: false
+    t.string "title"
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "username", null: false
     t.string "email", null: false
     t.string "password_digest", null: false
     t.string "session_token", null: false
@@ -39,14 +41,15 @@ ActiveRecord::Schema.define(version: 2020_08_17_223300) do
     t.datetime "updated_at", null: false
     t.date "birthdate"
     t.string "gender"
+    t.string "fname"
+    t.string "lname"
+    t.string "image"
     t.index ["email"], name: "index_users_on_email"
     t.index ["session_token"], name: "index_users_on_session_token"
-    t.index ["username"], name: "index_users_on_username"
   end
 
   create_table "workouts", force: :cascade do |t|
     t.integer "duration", null: false
-    t.string "type", null: false
     t.integer "route_id"
     t.integer "user_id"
     t.integer "elevation"
@@ -57,6 +60,7 @@ ActiveRecord::Schema.define(version: 2020_08_17_223300) do
     t.time "time", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "activity_type"
     t.index ["route_id"], name: "index_workouts_on_route_id"
     t.index ["user_id"], name: "index_workouts_on_user_id"
   end

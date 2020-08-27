@@ -6,16 +6,31 @@ import HeaderContainer from './header/header_container';
 import Splash from './splash/splash_container';
 import SignUpFormContainer from './session_form/signup_form_container';
 import LogInFormContainer from './session_form/login_form_container';
+import FeedContainer from './feed/feed_container';
+import RouteContainer from './route_form/route_form_container';
+import RouteUpdateContainer from './route_form/route_update_container';
+import RouteIndexContainer from './route_form/route_index_container';
+import WorkoutContainer from './workout_form/workout_form_container';
+import WorkoutUpdateContainer from './workout_form/workout_update_container';
+import WorkoutIndexContainer from './workout_form/workout_index_container';
+import { AuthRoute, ProtectedRoute} from '../util/route_util';
 
 const App = () => (
-  <div>
+  <div className="main">
     <header>
       <HeaderContainer />
     </header>
     <Switch>
-      <Route exact path="/login" component={LogInFormContainer}/>
-      <Route exact path="/signup" component={SignUpFormContainer}/>
-      <Route exact path="/" component={Splash}/>
+      <AuthRoute exact path="/login" component={LogInFormContainer}/>
+      <AuthRoute exact path="/signup" component={SignUpFormContainer}/>
+      <ProtectedRoute exact path="/feed" component={FeedContainer}/>
+      <ProtectedRoute exact path="/routes/new" component={RouteContainer}/>
+      <ProtectedRoute exact path="/:user_id/routes" component={RouteIndexContainer}/>
+      <ProtectedRoute exact path="/routes/update/:id" component={RouteUpdateContainer}/>
+      <ProtectedRoute exact path="/activities/new" component={WorkoutContainer}/>
+      <ProtectedRoute exact path="/:userId/activities" component={WorkoutIndexContainer}/>
+      <ProtectedRoute exact path="/activities/update/:id" component={WorkoutUpdateContainer}/>
+      <AuthRoute exact path="/" component={Splash}/>
     </Switch>
   </div>
 );

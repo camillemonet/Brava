@@ -1,0 +1,123 @@
+.route-index-page {
+  margin: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.route-index-ele {
+  display: block;
+  padding: 20px 0px;
+  min-width: 300px;
+}
+
+.route-index-title-h2 {
+  width: 300px; 
+  text-align: center; 
+  border-bottom: 1px solid rgb(180, 180, 180); 
+  line-height: 0.1em;
+  margin: 20px auto; 
+  display: flex;
+  justify-content: center;
+}
+
+.route-index-title {
+  font-size: 18px;
+  font-weight: bold;
+  background-color:white; 
+  padding:0 10px; 
+  height: 10px;
+  position: absolute;
+  margin: 0px auto;
+}
+
+.route-index-delete-btn {
+  display: block;
+  color: black;
+  margin: 0px auto;
+  padding: 15px 0px;
+  width: 300px;
+  background-color: #fc5200;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  transition: 0.3s;
+}
+
+.route-index-delete-btn:hover {
+  -webkit-box-shadow: 0 0 8px black;
+  box-shadow: 0 0 8px black;
+}
+
+.route-index-edit-link {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 15px 0px;
+  background-color: rgb(221, 221, 221);
+  font-size: 16px;
+  transition: 0.3s;
+  width: 100%;
+  overflow: hidden;
+}
+
+.route-index-dis-edit {
+  width: 300px;
+  display: flex;
+  margin: 5px auto;
+}
+
+.route-index-dis {
+  float: left;
+  color: rgb(180, 180, 180);
+  font-size: 40px;
+  font-weight: 1000;
+  padding-right: 10px;
+}
+
+.route-index-edit-link:hover {
+  background-color: rgb(180, 180, 180);
+}
+
+.route-index-map-div {
+  overflow: hidden;
+  height: 300px;
+  width: 300px;
+  margin: 0px auto;
+}
+
+.route-index-map-div > div {
+  width: 100%;
+  height: 100%;
+}
+
+.route-index-map {
+  z-index: -1;
+  width: 300px !important;
+  height: 300px !important;
+}
+
+@media screen and (min-width: 0px) and (max-width: 750px) {
+  .route-index-ele {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 750px) and (max-width: 1000px) {
+  .route-index-ele {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1350px) {
+  .route-index-ele {
+    width: 33%;
+  }
+}
+
+@media screen and (min-width: 1350px) {
+  .route-index-ele {
+    width: 25%;
+  }
+}

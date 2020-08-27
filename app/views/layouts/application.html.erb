@@ -4,12 +4,14 @@
     <title>Brava</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <%= favicon_link_tag asset_path('favicon.ico') %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
 
     <script type="text/javascript">
       window.logoURL = "<%= image_url('brava_logo.jpg') %>";
+      window.logo2URL = "<%= image_url('brava_logo2.jpg') %>";
     </script>
   </head>
 

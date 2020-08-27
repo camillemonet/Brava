@@ -1,0 +1,87 @@
+.route-form-main {
+  height: 0px;
+}
+
+.route-left-bar {
+  width: 25%;
+  padding: 0px;
+  margin: 0px;
+}
+
+.map-container {
+  width: 100%;
+  z-index: -2;
+}
+
+.map {
+  z-index: -1;
+  margin-left: 25%;
+  margin-right: 0px;
+  width: 75% !important;
+}
+
+.map > div {
+  width: 100% !important;
+}
+
+.route-form {
+  display: block;
+}
+
+.routing-preferences {
+  text-align: center;
+  display: block;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.route-delete-pt {
+  display: block;
+  margin: 20px auto;
+  box-sizing: border-box;
+  border: 1px solid white;
+  width: 75%;
+  border-radius: 8px;
+  padding: 10px 0px;
+  cursor: pointer;
+  transition: 0.3s;
+  background-color: rgb(212, 212, 212);
+  font-size: 14px;
+}
+
+.route-delete-pt:hover {
+  background-color: rgb(179, 179, 179);
+  border-color: rgb(90, 90, 90);
+}
+
+.route-create-btn {
+  display: block;
+  margin: 10px auto;
+  box-sizing: border-box;
+  background-color:#fc5200;
+  width: 75%;
+  border: 1px solid white;
+  padding: 10px 0px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.route-create-btn:hover {
+  background-color: #be3f00;
+  border-color: rgb(90, 90, 90);
+}
+
+.route-title-input {
+  margin: 10px auto;
+  border-radius: 5px;
+  width: 70%;
+  display: block;
+  height: 28px;
+  font-size: 14px;
+  text-align: center;
+}
+

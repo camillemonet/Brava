@@ -1,11 +1,23 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaAddressCard, FaEnvelope } from 'react-icons/fa';
+import { FaAddressCard, FaEnvelope, FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
 
 class Splash extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.handleDemoSubmit = this.handleDemoSubmit.bind(this);
+  }
+
+  handleDemoSubmit(e) {
+    e.preventDefault();
+    this.props.login({ email: 'demo@gmail.com', password: '123456' })
+      .then(() => this.props.history.push("/feed"));
+  }
+
   render() {
     return(
-      <div>
+      <div className="splash-content">
       <div className="splash-main">
 
         <h2 className="splash-text-center">The #1 app for runners and cyclists</h2>
@@ -20,10 +32,12 @@ class Splash extends React.Component {
 
             <div className="splash-signup-links">
 
-              <Link to="/signup" className="splash-signup-link-demo">
-                <FaAddressCard className="splash-react-icon"/>
-                <div>Sign up with Demo</div>
-              </Link>
+              <form onSubmit={this.handleDemoSubmit}>
+                <button className="splash-signup-link-demo">
+                  <FaAddressCard className="splash-react-icon" />
+                  <div>Sign up with Demo</div>
+                </button>
+              </form>
 
               <div className="splash-or-div">
                 <div className="splash-or">or</div>
@@ -57,7 +71,49 @@ class Splash extends React.Component {
 
       </div>
       <div className="splash-footer">
-        footer info
+
+        <div className="splash-footer-c1">
+            <img src={window.logo2URL} className="header-logo2" alt="Logo" />
+        </div>
+
+        <div className="splash-footer-c2">
+          <div className="splash-footer-header">MENU</div>
+          <div className="splash-footer-c2-12">
+            <div className="splash-footer-c2-1">
+              <a href="#">FEATURES</a>
+              <a href="#">SUBSCRIPTION</a>
+              <a href="#">ABOUT</a>
+              <a href="#">CAREERS</a>
+              <a href="#">BLOG</a>
+            </div>
+            <div className="splash-footer-c2-2">
+              <a href="#">LOCAL</a>
+              <a href="#">SUPPORT</a>
+              <a href="#">BUSINESS</a>
+              <a href="#">TERMS</a>
+              <a href="#">PRIVACY</a>
+            </div>
+          </div>
+        </div>
+
+        <div className="splash-footer-c3">
+          <div className="splash-footer-header">FOLLOW</div>
+          <div className="splash-footer-c3-1">
+            <a href="#"><FaFacebookF className="splash-footer-icon"/>FACEBOOK</a>
+            <a href="#"><FaInstagram className="splash-footer-icon"/>INSTAGRAM</a>
+            <a href="#"><FaTwitter className="splash-footer-icon"/>TWITTER</a>
+            <a href="#"><FaYoutube className="splash-footer-icon"/>YOUTUBE</a>
+          </div>
+        </div>
+
+        <div className="splash-footer-c3">
+          <div className="splash-footer-header">GET STARTED</div>
+          <div className="splash-footer-c4-1">
+            <a href="#">SIGN UP</a>
+            <a href="#">LOG IN</a>
+          </div>
+        </div>
+
       </div>
       </div>
     )
