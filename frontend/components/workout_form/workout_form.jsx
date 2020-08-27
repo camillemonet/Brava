@@ -28,7 +28,7 @@ class WorkoutForm extends React.Component {
   runTypes() {
     return(
       <select value={this.state.run_type} onChange={this.update("run_type")} name="run_type">
-        <option value="n/a" disabled>Run Type</option>
+        <option value="" disabled>Run Type</option>
         <option value="race">Race</option>
         <option value="long run">Long Run</option>
         <option value="workout">Workout</option>
@@ -45,14 +45,16 @@ class WorkoutForm extends React.Component {
     return(
       <div className="workout-form-main">
 
-        <form onSubmit={this.handleSubmit}>
+        <h1 className="workout-form-header">{this.props.headerText}</h1>
+
+        <form className="workout-form" onSubmit={this.handleSubmit}>
         
           <label>Duration:
             <input type="number" value={this.state.duration} onChange={this.update("duration")}/>
           </label>
 
           <select value={this.state.activity_type} onChange={this.update("activity_type")} name="activity_type"> 
-            <option value="n/a" disabled>Workout Type</option>
+            <option value="" disabled>Workout Type</option>
             <option value="ride">Ride</option>
             <option value="run">Run</option>
             <option value="swim">Swim</option>
@@ -64,7 +66,7 @@ class WorkoutForm extends React.Component {
           </select>
 
           <select value={this.state.route_id} onChange={this.update("route_id")}>
-            <option value="n/a" disabled>Route</option>
+            <option value="" disabled>Route</option>
             {
               this.props.routes.map((route, idx) => {
                 return(
@@ -96,7 +98,7 @@ class WorkoutForm extends React.Component {
             <input type="time" value={this.state.time} onChange={this.update("time")} />
           </label>
 
-          <button type="submit">Create Activity</button>
+          <button type="submit">Submit</button>
         
         </form>
 

@@ -29,6 +29,7 @@ const mapStateToProps = ({ session, entities: { users, routes, workouts } }, { m
     currentUser: users[session.id],
     workout: workoutObj,
     routes: Object.values(routes),
+    headerText: "Update Activity"
   };
 };
 

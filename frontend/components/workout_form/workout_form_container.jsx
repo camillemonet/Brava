@@ -8,17 +8,18 @@ const mapStateToProps = ({ session, entities: { users, routes } }) => {
     currentUser: users[session.id],
     workout: {
       duration: '',
-      activity_type: 'n/a',
-      route_id: 'n/a',
+      activity_type: '',
+      route_id: '',
       user_id: '',
       elevation: '',
       title: '',
       description: '',
-      run_type: 'n/a',
+      run_type: '',
       date: '',
       time: ''
     },
-    routes: Object.values(routes)
+    routes: Object.values(routes),
+    headerText: 'Create Activity'
   };
 };
 

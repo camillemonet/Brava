@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaRegBell, FaBell, FaPlusCircle } from 'react-icons/fa';
+import { FaRegBell, FaBell, FaPlusCircle, FaUser } from 'react-icons/fa';
 
 class Header extends React.Component {
 
@@ -89,7 +89,7 @@ class Header extends React.Component {
         {this.returnBell()}
         <div className="header-personal-trigger-image">
           <div className="header-title-right">
-            <div className="header-image"></div>
+            <div className="header-image"><FaUser className="header-user-icon"/></div>
             &#9662;
           </div>
           <ul>

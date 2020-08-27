@@ -53,8 +53,8 @@ class MapContainer extends React.Component {
     this.setState({ locations: temp, distance: dist });
 
     if (option !== "delete") {
-      console.log(this.state.locations)
-      console.log(this.state.distance)
+      // console.log(this.state.locations)
+      // console.log(this.state.distance)
     }
   }
 
@@ -161,4 +161,4 @@ class MapContainer extends React.Component {
   }
 }
 
-export default GoogleApiWrapper({ apiKey: 'AIzaSyCAzAXSI9n33NtUfMZxczEC65thCoNOD9Y' })(MapContainer);
+export default GoogleApiWrapper({ apiKey: window.googleAPIKey })(MapContainer);
