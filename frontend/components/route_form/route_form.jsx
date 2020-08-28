@@ -29,7 +29,7 @@ class MapContainer extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.createRoute({ route: { total_distance: this.state.distance, title: this.state.title }, locations: this.state.locations })
-      .then(() => this.props.history.push("/${this.props.currentUser.id}/routes"));
+      .then(() => this.props.history.push(`/${this.props.currentUser.id}/routes`));
   }
 
   updateTitle(e) {
