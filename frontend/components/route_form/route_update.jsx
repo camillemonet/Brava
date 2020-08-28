@@ -149,12 +149,17 @@ class MapContainer extends React.Component {
         <div className="route-left-bar">
 
           <h3 className="routing-preferences">Routing Preferences</h3>
+          
+          <input className="route-title-input" placeholder="Title" type="text" value={this.state.title} onChange={this.updateTitle} />
+          
+          <button className="route-delete-pt" onClick={this.deletePoint}>Delete Last Location</button>
+          
           <form onSubmit={this.handleSubmit} className="route-form">
-            <input className="route-title-input" placeholder="Title" type="text" value={this.state.title} onChange={this.updateTitle} />
-            <button className="route-delete-pt" onClick={this.deletePoint}>Delete Last Location</button>
             <button className="route-create-btn" type="submit">Update Route</button>
           </form>
         </div>
+
+      {this.state.distance ? <div className="route-distance-label">{this.state.distance}mi</div> : <div></div>}
 
       </div>
     );

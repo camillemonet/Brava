@@ -52,10 +52,10 @@ class MapContainer extends React.Component {
 
     this.setState({ locations: temp, distance: dist });
 
-    if (option !== "delete") {
+    // if (option !== "delete") {
       // console.log(this.state.locations)
       // console.log(this.state.distance)
-    }
+    // }
   }
 
   addNewMarker(mapProps, map, e) {
@@ -143,9 +143,12 @@ class MapContainer extends React.Component {
           <div className="route-left-bar">
 
             <h3 className="routing-preferences">Routing Preferences</h3>
+            
+            <input className="route-title-input" placeholder="Title" type="text" value={this.state.title} onChange={this.updateTitle} />
+            
+            <button className="route-delete-pt" onClick={this.deletePoint}>Delete Last Location</button>
+            
             <form onSubmit={this.handleSubmit} className="route-form">
-              <input className="route-title-input" placeholder="Title" type="text" value={this.state.title} onChange={this.updateTitle} />
-              <button className="route-delete-pt" onClick={this.deletePoint}>Delete Last Location</button>
               <button className="route-create-btn" type="submit">Create Route</button>
             </form>
           </div>
@@ -172,11 +175,16 @@ class MapContainer extends React.Component {
             <div className="route-left-bar">
 
               <h3 className="routing-preferences">Routing Preferences</h3>
+              
+              <input className="route-title-input" type="text" placeholder="Title" value={this.state.title} onChange={this.updateTitle} />
+              
+              <button className="route-delete-pt" onClick={this.deletePoint}>Delete Last Location</button>
+              
               <form onSubmit={this.handleSubmit} className="route-form">
-                <input className="route-title-input" type="text" placeholder="Title" value={this.state.title} onChange={this.updateTitle} />
-                <button className="route-delete-pt" onClick={this.deletePoint}>Delete Last Location</button>
                 <button className="route-create-btn" type="submit">Create Route</button>
               </form>
+
+              { this.state.distance ? <div className="route-distance-label">{this.state.distance}mi</div> : <div></div> }
             </div>
 
           </div>
@@ -184,7 +192,5 @@ class MapContainer extends React.Component {
     }
   }
 }
-
-debugger
 
 export default GoogleApiWrapper({ apiKey: window.googleAPIKey })(MapContainer);

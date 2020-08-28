@@ -9,7 +9,7 @@
     <script type="text/javascript">
       window.googleAPIKey = "<%= Rails.application.credentials.google[:api_key] %>"
     </script>
-
+    
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
 
@@ -17,6 +17,7 @@
       window.logoURL = "<%= image_url('brava_logo.jpg') %>";
       window.logo2URL = "<%= image_url('brava_logo2.jpg') %>";
     </script>
+
 
   </head>
 

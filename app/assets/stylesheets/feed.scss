@@ -1,5 +1,5 @@
 .feed-main {
-  height: 100vh;
+  height: calc(100vh - 63px);
   width: 100%;
   background-color: rgb(212, 212, 212);
   box-sizing: border-box;
@@ -14,19 +14,9 @@
   justify-content: center;
 }
 
-.feed-main-rhs {
-  display: flex;
-  width: 60%;
-  padding: 60px;
-  box-sizing: border-box;
-  position: absolute;
-  right: 0px;
-  height: 100%;
-}
-
 .feed-profile-bar {
   margin: 60px;
-  width: calc(100% - 120px);
+  width: calc(100% - 80px);
   background-color: white;
   position: absolute;
   height: calc(100% - 120px);
@@ -50,4 +40,294 @@
 .feed-profile-image-icon {
   color: white;
   font-size: 50px;
+}
+
+.feed-profile-name {
+  margin: 0px auto;
+  font-size: 20px;
+  text-align: center;
+  padding-top: 60px;
+  font-weight: bold;
+}
+
+.feed-profile-counts {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0px;
+  border-bottom: 1px solid rgb(230, 230, 230);
+}
+
+.feed-profile-count-title {
+  font-size: 14px;
+  color: rgb(117, 117, 117);
+  text-align: center;
+}
+
+.feed-profile-count-num {
+  padding-top: 10px;
+  text-align: center;
+  font-size: 25px;
+}
+
+.feed-profile-count-routes {
+  padding: 0px 50px;
+  border-right: 1px solid rgb(230, 230, 230);
+}
+
+.feed-profile-count-workouts {
+  padding: 0px 50px;
+}
+
+.feed-profile-latest {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1px solid rgb(230, 230, 230);
+  box-sizing: border-box;
+}
+
+.feed-profile-latest-label {
+  font-size: 14px;
+  width: 100%;
+}
+
+.feed-profile-latest-title {
+  padding: 5px 0px;
+  font-size: 14px;
+  font-weight: bold;
+  padding-right: 5px;
+}
+
+.feed-profile-latest-date {
+  padding: 5px 0px;
+  padding-left: 5px;
+  font-size: 14px;
+}
+
+.feed-profile-latest-box {
+  align-self: center;
+  font-size: 12px;
+}
+
+.feed-profile-overview-header {
+  display: block;
+  padding: 20px 5px 20px 5px;
+  font-size: 25px;
+  font-weight: 1000;
+  box-sizing: border-box;
+  margin-top: 9px;
+  text-align: center;
+}
+
+.feed-profile-tot-distance {
+  padding: 20px;
+  padding-top: 60px;
+  text-align: center;
+  color: rgb(117, 117, 117);
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.feed-profile-tot-time {
+  padding: 20px 10px 10px 10px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.feed-profile-times-icon {
+  padding: 10px 10px 0px 10px;
+}
+
+.feed-profile-times {
+  padding: 0px 20px;
+}
+
+[class*="feed-profile-time-icon"] {
+  padding: 5px 10px 5px 0px;
+  display: flex;
+  align-items: center;
+}
+
+.feed-profile-time-runbar {
+  width: calc(var(--feed-run-time) * 100% / var(--feed-max-time) - 10%);
+  height: 10px;
+  background-color: rgb(85, 164, 255);
+}
+
+.feed-profile-time-bikebar {
+  width: calc(var(--feed-bike-time) * 100% / var(--feed-max-time) - 10%);
+  height: 10px;
+  background-color: #fc5200;
+}
+
+.feed-profile-time-swimbar {
+  width: calc(var(--feed-swim-time) * 100% / var(--feed-max-time) - 10%);
+  height: 10px;
+  background-color: rgb(114, 0, 114);
+}
+
+.feed-profile-time-otherbar {
+  width: calc(var(--feed-other-time) * 100% / var(--feed-max-time) - 10%);
+  height: 10px;
+  background-color: #bbdaa4;
+}
+
+.feed-profile-bar-label {
+  font-size: 10px;
+  padding-left: 7px;
+}
+
+.feed-profile-bar-time {
+  color: rgb(58, 58, 58);
+  font-size: 10px;
+  padding-left: 5px;
+  display: inline-block;
+  width: 39px;
+}
+
+.feed-main-rhs {
+  display: flex;
+  width: 60%;
+  padding: 50px 0px;
+  box-sizing: border-box;
+  position: absolute;
+  right: 0px;
+  height: calc(100% - 63px);
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  overflow-y: scroll;
+}
+
+.feed-activity-ele {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 300px;
+  background-color: white;
+  margin: 10px 40px 10px 0px;
+  position: relative;
+}
+
+.feed-activity-ele-lhs {
+  position: absolute;
+  left: 0px;
+  width: calc(100% - 300px);
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.feed-activity-ele-rhs {
+  z-index: 3;
+  position: absolute;
+  right: 0px;
+}
+
+.feed-ele-icon-div {
+  height: 300px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // background-color: #fc5200;
+  // color: white;
+  color: #fc5200;
+  box-sizing: border-box;
+}
+
+.feed-ele-icon {
+  font-size: 160px;
+}
+
+.gm-style-cc {
+  display: none;
+}
+
+.gmnoprint.gm-style-cc {
+  display: none;
+}
+
+.gmnoprint {
+  display: none;
+}
+
+.gmnoscreen {
+  display: none;
+}
+
+.feed-activity-ele-title {
+  padding: 30px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.feed-activity-ele-del-div {
+  position: absolute;
+  height: 50px;
+  bottom: 0px;
+  width: 100%;
+}
+
+.feed-activity-ele-del {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(122, 122, 122);
+  border: none;
+  font-size: 16px;
+  color: white;
+  font-weight: bold;
+}
+
+.feed-activity-ele-del:hover {
+  background-color: rgb(85, 85, 85);
+}
+
+.feed-activity-ele-edit-div {
+  position: absolute;
+  bottom: 50px;
+  width: 100%;
+  display: block;
+}
+
+.feed-activity-ele-edit {
+  width: 100%;
+  height: 100%;
+  background-color: #bbdaa4;
+  display: block;
+  text-align: center;
+  padding: 17px 0px;
+  color: black;
+}
+
+.feed-activity-ele-edit:hover {
+  background-color: #95af81;
+}
+
+.feed-activity-ele-description {
+  padding: 0px 30px;
+}
+
+.feed-ele-icon-swim {
+  color: rgb(85, 164, 255);
+}
+
+.feed-ele-icon-ski {
+  color: rgb(114, 0, 114);
+}
+
+.feed-activity-ele-title-type {
+  color: rgb(117, 117, 117);
+  font-size: 14px;
+  padding-top: 8px;
+}
+
+.route-index-map-dist-label {
+  height: 30px;
+  position: absolute;
+  z-index: 5;
+  right: 10px;
+  bottom: -5px;
+  font-weight: bold;
+  color: rgb(85, 85, 85);
 }

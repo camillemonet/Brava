@@ -60,16 +60,8 @@ class Header extends React.Component {
             <div className="header-title-left">Dashboard &#9662;</div>
             <ul>
               <li><Link to="/feed">Activity Feed</Link></li>
-              <li><a href="#">My Segments</a></li>
               <li><Link to={`/${this.props.currentUser.id}/routes`}>My Routes</Link></li>
             </ul>
-        </div>
-        <div className="header-personal-trigger-training">
-          <div className="header-title-left">Training &#9662;</div>
-          <ul>
-            <li><a href="#">Training Calendar</a></li>
-            <li><Link to={`/${this.props.currentUser.id}/activities`}>My Activities</Link></li>
-          </ul>
         </div>
         <div className="header-personal-trigger-explore">
           <div className="header-title-left">Explore &#9662;</div>
@@ -93,7 +85,6 @@ class Header extends React.Component {
             &#9662;
           </div>
           <ul>
-            <li><a href="#">Find Friends</a></li>
             <li><a href="#">My Profile</a></li>
             <li><a href="#">Settings</a></li>
             <li><Link to="#" className="header-logout-button" onClick={this.logoutFn}>Log Out</Link></li>
@@ -106,7 +97,6 @@ class Header extends React.Component {
           <ul>
             <li><Link to="/activities/new">Add Activity</Link></li>
             <li><Link to="/routes/new">Create a Route</Link></li>
-            <li><a href="#">Create a Post</a></li>
           </ul>
         </div>
       </div>

@@ -42,7 +42,7 @@ class RouteIndex extends React.Component {
               </h2>
 
               <div className="route-index-dis-edit" key={4*(routesArr.length)+idx+4}>
-                <div className="route-index-dis" key={5*(routesArr.length)+idx+5}>{route.total_distance}Mi</div>
+                <div className="route-index-dis" key={5*(routesArr.length)+idx+5}>{route.total_distance}mi</div>
                 <Link to={`/routes/update/${route.id}`} className="route-index-edit-link" key={idx}>Edit</Link>
               </div>
 

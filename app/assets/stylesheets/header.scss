@@ -55,6 +55,7 @@
   display: flex;
   align-items: center;
   height: 62px;
+  z-index: 7;
 }
 
 [class*="header-personal-trigger"] {
@@ -104,6 +105,12 @@
 
 [class*="header-personal-trigger"]:hover > ul {
   display: block;
+}
+
+[class*="header-personal-trigger"]:hover > div {
+  border-left: 1px solid rgb(225, 225, 225);
+  border-right: 1px solid rgb(225, 225, 225);
+  border-bottom: 1px solid white;
 }
 
 .header-personal-left ul a, .header-personal-right ul a {

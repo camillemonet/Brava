@@ -2,16 +2,118 @@
   display: flex;
   width: 100%;
   height: 100%;
+  flex-wrap: wrap;
 }
 
 .workout-form-header {
   display: inline-block;
-  font-size: 40px;
+  font-size: 30px;
   font-weight: bold;
-  width: 100%;
+  width: 800px;
+  padding: 35px 100px;
 }
 
 .workout-form {
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
   width: 100%;
+  padding: 0px 80px;
+  align-items: center;
+}
+
+.workout-form-input-label {
+  font-size: 14px;
+  color: rgb(50, 50, 50);
+  padding-bottom: 5px;
+}
+
+[class*="workout-form-field"] {
+  padding: 20px;
+}
+
+.workout-form-field-duration > input, 
+.workout-form-field-elevation > input, 
+.workout-form-field-title > input, 
+.workout-form-field-description > input {
+  height: 25px;
+  text-align: center;
+  border: 1px solid rgb(200, 200, 200);
+  border-radius: 3px;
+  margin-right: 50px;
+  width: 100%;
+}
+
+.workout-form-field-duration > input:focus, 
+.workout-form-field-elevation > input:focus, 
+.workout-form-field-title > input:focus, 
+.workout-form-field-description > input:focus {
+  border: 1px solid black;
+}
+
+.workout-form-field-duration {
+  width: 10%;
+  min-width: 94px;
+}
+
+.workout-form-field-elevation {
+  width: 15%;
+  min-width: 100px;
+}
+
+.workout-form-field-title {
+  width: 20%;
+  min-width: 100px;
+}
+
+.workout-form-field-description {
+  width: 35%;
+}
+
+.workout-form-field-activity {
+  width: 20%;
+}
+
+.workout-form-field-activity > select {
+  width: 100%;
+  height: 31px;
+  padding-left: 10px;
+}
+
+.workout-form-select-route {
+  width: 20%;
+  height: 31px;
+  padding-left: 10px;
+  margin-right: 20px;
+}
+
+.workout-form-select-run {
+  width: 20%;
+  height: 31px;
+  padding-left: 10px;
+  margin-left: 20px;
+}
+
+.workout-form-field-date {
+  width: 100%;
+}
+
+.workout-form-field-date > input {
+  width: 20%;
+  height: 25px;
+}
+
+.workout-form-submit {
+  margin: 20px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #fc5200;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  transition: 0.3s;
+  border-radius: 5px;
+}
+
+.workout-form-submit:hover {
+  background-color: #c54200;
 }
