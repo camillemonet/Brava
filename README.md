@@ -23,7 +23,32 @@ As previously mentioned, the 'google-maps-react' package was utilized to render 
 
 ![Create Route Image](https://github.com/camillemonet/images/blob/master/create_route.png)
 
-These routes are comprised of waypoints. These waypoints are represented by the markers on the route in the map. Waypoints must be stored with latitude and longitude coordinates, as well as their specified place in the route. As ordered objects cannot be stored in the rails database, an additional column was added to the waypoints table to store their order in the route. 
+These routes are comprised of waypoints. These waypoints are represented by the markers on the route in the map. Waypoints must be stored with latitude and longitude coordinates, as well as their specified place in the route. As ordered objects cannot be stored in the rails database, an additional column was added to the waypoints table to store their order in the route. Below is a code snippet of a function used to render the path on the map: 
+
+```javascript
+calculateAndDisplayRoute(map) {
+
+    this.state.directionsDisplay.setMap(map);
+
+    let waypoints = this.state.locations.slice();
+
+    let origin = waypoints.shift().location;
+    let destination = waypoints.pop().location;
+
+    this.state.directionsService.route({
+      origin: origin,
+      destination: destination,
+      waypoints: waypoints,
+      travelMode: 'WALKING'
+    }, (response, status) => {
+      if (status === 'OK') {
+        this.state.directionsDisplay.setDirections(response);
+      } else {
+        window.alert('Directions request failed due to ' + status);
+      }
+    });
+  }
+```
 
 ### Deleting Waypoints
 
