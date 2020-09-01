@@ -52,5 +52,29 @@ calculateAndDisplayRoute(map) {
 
 ### Deleting Waypoints
 
+In order to save a route and optimize efficiency, the decision was made to save all waypoints through one route creation ajax call rather than multiple waypoint creation ajax calls. This meant that the waypoints were created within the routes controller create method. This functioned as desired for the purpose of route creation. However, this approach made it difficult to edit a route or delete points from the route as no individual waypoint ajax calls were being made. 
+
+In order to solve this issue in a time-sensitive manner, it was decided that the waypoints must be deleted and recreated each time a route is updated. While the route ID is maintained along with its creation timestamp, the waypoints themselves are updated. The code used in the routes controller to carry this out is shown below: 
+
+```javascript
+def update
+
+    @route = Route.find_by(id: params[:route][:routeId].to_i)
+    @route.update(total_distance: route_params[:total_distance].to_f, title: route_params[:title])
+
+    @route.locations.each do |location|
+      location.delete
+    end
+
+    params[:locations].each do |idx, location|
+      Location.new(latitude: location[:location][:lat].to_f, longitude: location[:location][:lng].to_f, route_id: @route.id, order: idx.to_i).save
+    end
+
+    render "api/routes/show"
+
+  end
+```
+
+This approach is obviously not optimized. A proposed alteration to the project would be a 'waypoints edited' array comprised of waypoint IDs that is passed back with the route upon its update, at which point the necessary waypoints could be edited or deleted. Looking forward, more research must be conducted to verify the effectiveness of this approach.
 
 
