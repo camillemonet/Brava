@@ -20,7 +20,7 @@ const mapStateToProps = ({ session, entities: { users, workouts, routes } }) => 
   let swimTime = 0;
   let otherTime = 0;
   let maxTime = 0.01;
-  let totTime = {};
+  let totTime = {hours: 0, minutes: 0};
 
   if (Object.keys(workouts).length && Object.keys(routes).length) {
 

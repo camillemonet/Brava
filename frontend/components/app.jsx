@@ -3,6 +3,7 @@ import { Provider } from 'react-redux';
 import { Route, Redirect, Switch, Link, HashRouter } from 'react-router-dom';
 
 import HeaderContainer from './header/header_container';
+import FooterContainer from './footer/footer_container';
 import Splash from './splash/splash_container';
 import SignUpFormContainer from './session_form/signup_form_container';
 import LogInFormContainer from './session_form/login_form_container';
@@ -32,6 +33,7 @@ const App = () => (
       <ProtectedRoute exact path="/activities/update/:id" component={WorkoutUpdateContainer}/>
       <AuthRoute exact path="/" component={Splash}/>
     </Switch>
+    <FooterContainer />
   </div>
 );
 

@@ -8,7 +8,7 @@ class Api::RoutesController < ApplicationController
   end
 
   def create
-    @route = Route.new(title: route_params[:title], user_id: current_user.id, total_distance: route_params[:total_distance])
+    @route = Route.new(title: route_params[:title], user_id: current_user.id, total_distance: route_params[:total_distance], show_route: true)
     
     if @route.save
       params[:locations].each do |idx, location|
@@ -24,7 +24,8 @@ class Api::RoutesController < ApplicationController
 
   def destroy
     @route = Route.find_by(id: params[:id])
-    if @route && @route.delete
+    if @route 
+      @route.update(show_route: false)
       render "api/routes/show"
     end
   end

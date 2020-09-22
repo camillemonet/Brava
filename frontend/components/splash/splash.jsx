@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaAddressCard, FaEnvelope, FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
+import { FaAddressCard, FaEnvelope, FaLinkedinIn, FaGithub } from 'react-icons/fa';
 
 class Splash extends React.Component {
 
@@ -80,18 +80,18 @@ class Splash extends React.Component {
           <div className="splash-footer-header">MENU</div>
           <div className="splash-footer-c2-12">
             <div className="splash-footer-c2-1">
-              <a href="#">FEATURES</a>
-              <a href="#">SUBSCRIPTION</a>
-              <a href="#">ABOUT</a>
-              <a href="#">CAREERS</a>
-              <a href="#">BLOG</a>
+              <a href="https://www.strava.com/features" target="_blank">FEATURES</a>
+              <a href="https://www.strava.com/subscribe" target="_blank">SUBSCRIPTION</a>
+              <a href="https://www.strava.com/about" target="_blank">ABOUT</a>
+              {/* <a href="#">CAREERS</a>
+              <a href="#">BLOG</a> */}
             </div>
             <div className="splash-footer-c2-2">
-              <a href="#">LOCAL</a>
-              <a href="#">SUPPORT</a>
-              <a href="#">BUSINESS</a>
-              <a href="#">TERMS</a>
-              <a href="#">PRIVACY</a>
+              <a href="https://www.strava.com/local" target="_blank">LOCAL</a>
+              <a href="https://support.strava.com/hc/en-us" target="_blank">SUPPORT</a>
+              <a href="https://business.strava.com/" target="_blank">BUSINESS</a>
+              {/* <a href="#">TERMS</a>
+              <a href="#">PRIVACY</a> */}
             </div>
           </div>
         </div>
@@ -99,18 +99,20 @@ class Splash extends React.Component {
         <div className="splash-footer-c3">
           <div className="splash-footer-header">FOLLOW</div>
           <div className="splash-footer-c3-1">
-            <a href="#"><FaFacebookF className="splash-footer-icon"/>FACEBOOK</a>
-            <a href="#"><FaInstagram className="splash-footer-icon"/>INSTAGRAM</a>
-            <a href="#"><FaTwitter className="splash-footer-icon"/>TWITTER</a>
-            <a href="#"><FaYoutube className="splash-footer-icon"/>YOUTUBE</a>
+            <a href="https://www.linkedin.com/in/camille-fogg-2b29a7173/" target="_blank"><FaLinkedinIn className="splash-footer-icon"/>LINKEDIN</a>
+            <a href="https://github.com/camillemonet" target="_blank"><FaGithub className="splash-footer-icon"/>GITHUB</a>
+            <a href="#"><FaEnvelope className="splash-footer-icon"/>CAMILLE.M.FOGG@GMAIL.COM</a>
+            {/* <a href="#"><FaYoutube className="splash-footer-icon"/>YOUTUBE</a> */}
           </div>
         </div>
 
         <div className="splash-footer-c3">
           <div className="splash-footer-header">GET STARTED</div>
           <div className="splash-footer-c4-1">
-            <a href="#">SIGN UP</a>
-            <a href="#">LOG IN</a>
+            <Link to="/signup">SIGN UP</Link> 
+            <Link to="/login">LOG IN</Link>
+            {/* <a href="#">SIGN UP</a> */}
+            {/* <a href="#">LOG IN</a> */}
           </div>
         </div>
 

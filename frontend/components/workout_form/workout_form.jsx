@@ -27,11 +27,12 @@ class WorkoutForm extends React.Component {
   }
 
   routeChoices() {
+    let possibleRoutes = this.props.routes.filter((route) => (route.show_route));
     return(
       <select className="workout-form-select-route" value={this.state.route_id} onChange={this.update("route_id")}>
         <option value="" disabled>Route</option>
         {
-          this.props.routes.map((route, idx) => {
+          possibleRoutes.map((route, idx) => {
             return (
               <option key={idx} value={route.id}>{route.title}</option>
             )

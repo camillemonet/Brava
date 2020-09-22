@@ -1,0 +1,41 @@
+.footer-loggedout {
+  position: fixed;
+  bottom: 0px;
+  display: flex;
+  color: white;
+  width: 100%;
+  background-color: #242428;
+  height: 25px;
+  font-size: 14px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer-loggedout a {
+  color: white;
+}
+
+.footer-loggedout a:hover {
+  text-decoration: underline;
+}
+
+.footer-loggedin {
+  position: fixed;
+  bottom: 0px;
+  display: flex;
+  color: white;
+  width: 100%;
+  background-color: white;
+  height: 25px;
+  font-size: 14px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer-loggedin a {
+  color: #7a7a7a;
+}
+
+.footer-loggedin a:hover {
+  text-decoration: underline;
+}
