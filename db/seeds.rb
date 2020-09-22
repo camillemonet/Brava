@@ -16,19 +16,22 @@ demo = User.create(email: "demo@gmail.com", password: "123456", fname: "Viktor",
 route1 = Route.create(
   title: "Regular Running Route",
   user_id: demo.id,
-  total_distance: 6.44
+  total_distance: 6.44,
+  show_route: true
 )
 
 route2 = Route.create(
   title: "State Park Route",
   user_id: demo.id,
-  total_distance: 13.06
+  total_distance: 13.06,
+  show_route: true
 )
 
 route3 = Route.create(
   title: "Campground Walk",
   user_id: demo.id,
-  total_distance: 1.91
+  total_distance: 1.91,
+  show_route: true
 )
   
 location1 = Location.new(

@@ -21,7 +21,8 @@ class RouteIndex extends React.Component {
   }
 
   render() {
-    let routesArr = Object.values(this.props.routes);
+    let tempArr = Object.values(this.props.routes);
+    let routesArr = tempArr.filter((route) => (route.show_route))
     
     if (this.props.routes === {}) {
       return null

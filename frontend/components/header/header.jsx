@@ -63,19 +63,7 @@ class Header extends React.Component {
               <li><Link to={`/${this.props.currentUser.id}/routes`}>My Routes</Link></li>
             </ul>
         </div>
-        <div className="header-personal-trigger-explore">
-          <div className="header-title-left">Explore &#9662;</div>
-          <ul>
-            <li><a href="#">Segment Explore</a></li>
-            <li><a href="#">Segment Search</a></li>
-            <li><a href="#">Athlete Search</a></li>
-            <li><a href="#">Clubs</a></li>
-            <li><a href="#">Apps</a></li>
-            <li><a href="#">Running Races</a></li>
-            <li><a href="#">Local</a></li>
-          </ul>
-        </div>
-        <Link to="/feed">Challenges</Link>
+        <Link to="/feed">Challenges</Link> 
       </div>
       <div className="header-personal-right">
         {this.returnBell()}
@@ -86,7 +74,6 @@ class Header extends React.Component {
           </div>
           <ul>
             <li><a href="#">My Profile</a></li>
-            <li><a href="#">Settings</a></li>
             <li><Link to="#" className="header-logout-button" onClick={this.logoutFn}>Log Out</Link></li>
           </ul>
         </div>
