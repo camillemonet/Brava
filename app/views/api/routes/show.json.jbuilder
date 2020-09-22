@@ -4,7 +4,7 @@ tempArr = []
 end
 
 json.route do
-  json.extract! @route, :id, :user_id, :title, :total_distance
+  json.extract! @route, :id, :user_id, :title, :total_distance, :show_route
   json.location_ids do
     json.array! tempArr
   end
