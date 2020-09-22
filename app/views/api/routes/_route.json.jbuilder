@@ -1,6 +1,6 @@
 json.routes do
   user.routes.each do |route|
-    json.extract! route, :id, :user_id, :title, :total_distance
+    json.extract! route, :id, :user_id, :title, :total_distance, :show_route
   end
 end
 
