@@ -6,11 +6,11 @@ Brava is a webapp which enables users to log their physical exercise through a v
 * Create completed activities to keep track of their progress
 * Optionally associate an activity with a route depending on the type of exercise
 
-Activities and routes can be updated or deleted if needed, and can be shown in the users' feed or routes index page respectively. Completed activities are shown through the feed page (shown below). 
+Activities and routes can be updated or deleted if needed, and can be shown in the users' feed or routes index page respectively. The demo user's completed activities are shown on their feed below.
 
 ![Create Route Image](https://github.com/camillemonet/images/blob/master/feed.png)
 
-Created routes are displayed on the routes index page.
+Their created routes are displayed on the routes index page.
 
 ![Create Route Image](https://github.com/camillemonet/images/blob/master/routes_index.png)
 
