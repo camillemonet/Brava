@@ -86,11 +86,16 @@
 }
 
 .route-distance-label {
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
+  position: relative;
+  left: 45px;
+  top: 10px;
   font-size: 40px;
   font-weight: bold;
   color: rgb(156, 156, 156);
 }
 
+.route-instructions {
+  width: 75%;
+  padding: 10px 0px;
+  margin: auto;
+}

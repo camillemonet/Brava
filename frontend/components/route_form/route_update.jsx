@@ -51,11 +51,6 @@ class MapContainer extends React.Component {
     dist = (dist * 0.000621371).toFixed(2);
 
     this.setState({ locations: temp, distance: dist });
-
-    if (option !== "delete") {
-      // console.log(this.state.locations)
-      // console.log(this.state.distance)
-    }
   }
 
   addNewMarker(mapProps, map, e) {
@@ -67,29 +62,37 @@ class MapContainer extends React.Component {
   }
 
   deletePoint() {
-    let endIdx = this.state.locations.length - 1;
-    let temp = this.state.locations.slice(0, endIdx);
-    this.setState({ locations: temp }, () => {
-      let waypoints = this.state.locations.slice();
 
-      let origin = waypoints.shift().location;
-      let destination = waypoints.pop().location;
+    if (this.state.locations.length === 2) {
+      let temp = this.state.locations[0];
+      this.setState({ locations: [temp] });
+      this.state.directionsDisplay.set('directions', null);
+    } else {
+      let endIdx = this.state.locations.length - 1;
+      let temp = this.state.locations.slice(0, endIdx);
+      this.setState({ locations: temp }, () => {
+        let waypoints = this.state.locations.slice();
+  
+        let origin = waypoints.shift().location;
+        let destination = waypoints.pop().location;
+  
+        this.state.directionsService.route({
+          origin: origin,
+          destination: destination,
+          waypoints: waypoints,
+          travelMode: 'WALKING'
+        }, (response, status) => {
+          if (status === 'OK') {
+            this.state.directionsDisplay.setDirections(response);
+          } else {
+            window.alert('Directions request failed due to ' + status);
+          }
+        });
+  
+        this.updateDragAndDist(this.state.directionsDisplay.getDirections(), "delete")
+      })
+    }
 
-      this.state.directionsService.route({
-        origin: origin,
-        destination: destination,
-        waypoints: waypoints,
-        travelMode: 'WALKING'
-      }, (response, status) => {
-        if (status === 'OK') {
-          this.state.directionsDisplay.setDirections(response);
-        } else {
-          window.alert('Directions request failed due to ' + status);
-        }
-      });
-
-      this.updateDragAndDist(this.state.directionsDisplay.getDirections(), "delete")
-    })
   }
 
   handleMapReady(mapProps, map) {
@@ -157,9 +160,13 @@ class MapContainer extends React.Component {
           <form onSubmit={this.handleSubmit} className="route-form">
             <button className="route-create-btn" type="submit">Update Route</button>
           </form>
+         
+          <div className="route-instructions">Click on map to place marker, drag to move. Route must be comprised of a title and at least two location points in order to save.</div>
+          {this.state.distance ? <div className="route-distance-label">{this.state.distance}mi</div> : <div></div>}
+        
         </div>
 
-      {this.state.distance ? <div className="route-distance-label">{this.state.distance}mi</div> : <div></div>}
+
 
       </div>
     );
