@@ -87,7 +87,7 @@ This approach is obviously not optimized. A proposed alteration to the project w
 
 Future features that have been considered are: 
 * Friending other users
-* Other users' completed activities showing on the feed
+* Showing other users' completed activities on the feed
 * Real-time comments on completed activities
 * Mobile device adaptation and tracking for route creation
 
