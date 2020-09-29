@@ -83,7 +83,7 @@ def update
 
 This approach is obviously not optimized. A proposed alteration to the project would be a 'waypoints edited' array comprised of waypoint IDs that is passed back with the route upon its update, at which point the necessary waypoints could be edited or deleted. Looking forward, more research must be conducted to verify the effectiveness of this approach.
 
-### Future Work
+### Future Implementations
 
 Future features that have been considered are: 
 * Friending other users
