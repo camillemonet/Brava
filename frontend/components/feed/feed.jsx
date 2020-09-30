@@ -168,7 +168,7 @@ class Feed extends React.Component {
 
             </div>
 
-            <div className="feed-profile-tot-distance">Distance Traveled: {this.props.totalDistance}mi</div>
+            <div className="feed-profile-tot-distance">Distance Traveled: {this.props.totalDistance.toFixed(2)}mi</div>
 
           </div>
         </div>
